@@ -16,7 +16,7 @@
 				data : {
 					id : $("#id").val(),
 					pw : $("#pw").val()
-				}, // Json 형식의 데이터이다.
+				}, //   Json 형식의 데이터이다.
 				success : function(res) {
 					console.log(res);// 비동기통신의 성공일경우 success콜백으로 들어옵니다. 'res'는 응답받은 데이터이다.
 					alert(res.resMsg);
