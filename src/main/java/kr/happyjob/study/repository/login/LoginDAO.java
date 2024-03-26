@@ -1,8 +1,18 @@
 package kr.happyjob.study.repository.login;
 
-import org.springframework.stereotype.Repository;
+import java.util.Map;
 
-@Repository("login") // sql.xml 파일 namespace와 매칭
+import org.apache.ibatis.annotations.Mapper;
+
+import kr.happyjob.study.model.login.LoginVO;
+
+@Mapper
 public interface LoginDAO {
+
+	// 회원가입
+	public int registerGo(Map<String, Object> paramMap);
+
+	// 로그인 xxxaaaa
+	public LoginVO loginGo(Map<String, Object> paramMap);
 
 }
