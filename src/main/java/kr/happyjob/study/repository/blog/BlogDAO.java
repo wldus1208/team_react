@@ -8,6 +8,5 @@ import org.apache.ibatis.annotations.Mapper;
 public interface BlogDAO {
 
 	public int insertblogreq(Map<String, Object> paramMap);
-
 	
 }

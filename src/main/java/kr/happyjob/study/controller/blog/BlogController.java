@@ -1,7 +1,6 @@
 package kr.happyjob.study.controller.blog;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -17,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import kr.happyjob.study.model.blog.BlogReqVO;
 import kr.happyjob.study.service.blog.BlogService;
 
 @Controller
@@ -50,8 +48,10 @@ public class BlogController {
 		  String action = (String) paramMap.get("action");
 		  //paramMap.put("loginid",(String)session.getAttribute("loginId"));
 		  paramMap.put("b_no", 3);
-		  
+		  logger.info("======== try 전");
 		  try {
+			  logger.info("======== try1");
+			  logger.info("   - ParamMap : " + paramMap);
 			  blogservice.insertblogreq(paramMap);
 //			  if("I".equals(action)) {
 //				  blogservice.insertblogreq(paramMap);
@@ -64,6 +64,7 @@ public class BlogController {
 		      resultMap.put("result", "SUCCESS");
 	  
 		  } catch (Exception e) {
+			  logger.info("======== catch1");
 			  resultMap.put("result", "FAIL");
 			  resultMap.put("resultmsg", e.getMessage());
 		  }	  
