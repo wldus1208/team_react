@@ -47,7 +47,7 @@ public class LoginController {
 		} catch (Exception e) {
 			e.printStackTrace();
 			resMap.put("result", "FAIL");
-		}
+		}	
 
 		return resMap;
 	}

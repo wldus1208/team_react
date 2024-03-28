@@ -49,7 +49,6 @@ public class BlogController {
 		  
 		  String action = (String) paramMap.get("action");
 		  //paramMap.put("loginid",(String)session.getAttribute("loginId"));
-		  paramMap.put("b_no", 3);
 		  
 		  try {
 			  blogservice.insertblogreq(paramMap);
